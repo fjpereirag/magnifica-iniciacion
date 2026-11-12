@@ -279,3 +279,18 @@ main{position:relative;z-index:1}
 .breve{background:color-mix(in srgb,var(--accent) 10%,#fff)}
 .enc{background:#fffaf0}
 .btn--ghost{color:var(--fg)}
+
+/* ---- Contraste en móvil (auditoría WCAG AA) ---- */
+:root{--accent:#7A5420;--muted:#5E5244}
+.btn:hover{background:#5f4118}
+/* textos sobre la escena: cartela crema translúcida */
+.etapa__rn,.etapa__lugar,.etapa__hint{width:fit-content;background:rgba(250,245,236,.88);padding:.15em .45em;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.etapa__rn{padding:.08em .3em 0}
+.etapa__lugar{margin-top:0;color:var(--fg)}
+.etapa__hint{margin-top:0;color:var(--fg)}
+.hero{background:linear-gradient(to top,rgba(246,239,227,.92) 0%,rgba(246,239,227,.8) 55%,rgba(246,239,227,0) 85%)}
+@media (min-width:800px){.hero{background:linear-gradient(to right,rgba(246,239,227,.9) 0%,rgba(246,239,227,.7) 40%,rgba(246,239,227,0) 65%)}}
+.tramo p{background:rgba(250,245,236,.85);padding:.6em .8em;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.top{background:rgba(246,239,227,.96);border-bottom:1px solid var(--line);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+@media (max-width:480px){.top__brand{font-size:.8rem;max-width:34vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.top__cur{max-width:52vw}}
+:root{--panel:rgba(255,252,246,.97)}
