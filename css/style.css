@@ -260,3 +260,22 @@ main{position:relative;z-index:1}
 @media (min-width:800px){.glosario{grid-template-columns:1fr 1fr;column-gap:var(--space-4)}.palabras__inner{padding:var(--space-6) var(--space-5)}}
 .prologo a{color:var(--accent)}
 .final__indices{margin-top:var(--space-4)}
+
+/* ---- Variante «amanecer»: clara, pergamino y oro ---- */
+:root{--bg:#F6EFE3;--fg:#2A2119;--muted:#6F6252;--accent:#94692A;--accent-2:#7A1F1F;--panel:rgba(255,252,246,.92);
+  --line:color-mix(in srgb,var(--fg) 14%,transparent);--line-gold:color-mix(in srgb,var(--accent) 50%,transparent)}
+.stage__veil{background:
+  radial-gradient(120% 85% at 50% 42%,transparent 50%,rgba(246,239,227,.75) 100%),
+  linear-gradient(to bottom,rgba(246,239,227,.9),rgba(246,239,227,.2) 26%,transparent 42%,transparent 58%,rgba(246,239,227,.7) 94%)}
+.top{background:linear-gradient(to bottom,rgba(246,239,227,.95),rgba(246,239,227,0))}
+.top__nav{background:rgba(250,245,236,.98)}
+.hero__title{text-shadow:0 2px 30px rgba(246,239,227,.95),0 0 80px rgba(246,239,227,.8)}
+.hero__sub,.etapa__lugar,.etapa__hint{text-shadow:0 1px 16px rgba(246,239,227,.95),0 0 30px rgba(246,239,227,.9)}
+.etapa__rn{text-shadow:0 4px 40px rgba(246,239,227,.9)}
+.tramo p{text-shadow:0 1px 18px rgba(246,239,227,1),0 0 40px rgba(246,239,227,.95)}
+.panel,.final__inner,.palabras__inner,.prologo__inner{box-shadow:0 18px 50px -20px rgba(80,55,20,.35)}
+.btn{color:#FFFBF3}
+.btn:hover{background:#7d5820}
+.breve{background:color-mix(in srgb,var(--accent) 10%,#fff)}
+.enc{background:#fffaf0}
+.btn--ghost{color:var(--fg)}

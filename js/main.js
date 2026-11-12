@@ -48,24 +48,24 @@ function initScene() {
   const mobile = innerWidth < 760;
   renderer.setPixelRatio(Math.min(devicePixelRatio, mobile ? 1.5 : 2));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.25;
-  const scene = new THREE.Scene(), BG_N = new THREE.Color('#0B0A08'), BG_W = new THREE.Color('#2a1f16');
-  scene.background = BG_N.clone(); scene.fog = new THREE.FogExp2(BG_N.clone(), .03);
+  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+  const scene = new THREE.Scene(), BG_N = new THREE.Color('#E8D9C0'), BG_W = new THREE.Color('#F2D7A6');
+  scene.background = BG_N.clone(); scene.fog = new THREE.FogExp2(BG_N.clone(), .024);
   const camera = new THREE.PerspectiveCamera(40, 1, .1, 400);
-  const hemi = new THREE.HemisphereLight('#5a6482', '#2a1d0e', 1.4); scene.add(hemi);
-  const moon = new THREE.DirectionalLight('#e2dccf', 1.9); moon.position.set(-10, 16, 10); scene.add(moon);
+  const hemi = new THREE.HemisphereLight('#fff3dc', '#8a6d48', 1.6); scene.add(hemi);
+  const moon = new THREE.DirectionalLight('#fff0d0', 2.2); moon.position.set(-10, 16, 10); scene.add(moon);
   const V = (x, y, z) => new THREE.Vector3(x, y, z);
 
   const glowTex = canvasTex(128, 128, g => { const r = g.createRadialGradient(64, 64, 0, 64, 64, 64); r.addColorStop(0, 'rgba(255,240,205,1)'); r.addColorStop(.3, 'rgba(240,190,100,.55)'); r.addColorStop(1, 'rgba(201,163,91,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128); });
-  const glow = (color = '#ffffff', s = 1) => { const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, color, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0 })); sp.scale.setScalar(s); scene.add(sp); return sp; };
+  const glow = (color = '#ffffff', s = 1) => { const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, color, transparent: true, depthWrite: false, opacity: 0 })); sp.scale.setScalar(s); scene.add(sp); return sp; };
 
   // suelo y estrellas
-  const ground = new THREE.Mesh(new THREE.CircleGeometry(60, 64), new THREE.MeshStandardMaterial({ color: '#17120c', roughness: 1 }));
+  const ground = new THREE.Mesh(new THREE.CircleGeometry(60, 64), new THREE.MeshStandardMaterial({ color: '#cdb995', roughness: 1 }));
   ground.rotation.x = -Math.PI / 2; scene.add(ground);
   const SN = mobile ? 700 : 1200, sp = new Float32Array(SN * 3);
   for (let i = 0; i < SN; i++) { const th = rand() * Math.PI * 2, ph = rand() * Math.PI * .42; sp.set([Math.cos(th) * Math.sin(ph) * 120, Math.cos(ph) * 70 + 8, Math.sin(th) * Math.sin(ph) * 120], i * 3); }
   const sg = new THREE.BufferGeometry(); sg.setAttribute('position', new THREE.BufferAttribute(sp, 3));
-  scene.add(new THREE.Points(sg, new THREE.PointsMaterial({ color: '#efe4c8', size: mobile ? .38 : .3, fog: false, transparent: true, opacity: .8 })));
+  scene.add(new THREE.Points(sg, new THREE.PointsMaterial({ color: '#ffffff', size: mobile ? .38 : .3, fog: false, transparent: true, opacity: 0 })));
 
   /* Babel: torre escalonada con circuitos */
   const BX = 5.5, BZ = -1.5;
@@ -75,7 +75,7 @@ function initScene() {
       for (let j = 0; j < 4; j++) { if (rand() < .5) x += (rand() - .5) * 90; else y += (rand() - .5) * 90; g.lineTo(x, y); } g.stroke();
       g.fillStyle = '#9ff0ff'; g.fillRect(x - 3, y - 3, 6, 6); }
   });
-  const towerMat = new THREE.MeshStandardMaterial({ color: '#3a3f44', map: circ, emissiveMap: circ, emissive: '#ffffff', emissiveIntensity: .4, roughness: .7 });
+  const towerMat = new THREE.MeshStandardMaterial({ color: '#66727c', map: circ, emissiveMap: circ, emissive: '#ffffff', emissiveIntensity: .4, roughness: .7 });
   const tower = new THREE.Group(); tower.position.set(BX, 0, BZ); scene.add(tower);
   for (let i = 0; i < 7; i++) { const w = 3.4 - i * .42, h = .9;
     const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, w), towerMat); m.position.y = h / 2 + i * h; tower.add(m); }
@@ -126,14 +126,14 @@ function initScene() {
   const gates = [0, 2, 5].map(i => { const am = segs[i].am, g = glow('#ffe3a8', 1); g.position.set(JX + Math.cos(am) * (JR + .25), 1, JZ + Math.sin(am) * (JR + .25)); g.scale.set(1.5, 2.2, 1); return g; });
   // paso 6: luces rojas de guerra y palomas de luz
   const redTex = canvasTex(64, 64, g => { const r = g.createRadialGradient(32, 32, 0, 32, 32, 32); r.addColorStop(0, 'rgba(255,190,160,1)'); r.addColorStop(.3, 'rgba(255,70,40,.7)'); r.addColorStop(1, 'rgba(255,40,20,0)'); g.fillStyle = r; g.fillRect(0, 0, 64, 64); });
-  const sparks = Array.from({ length: 40 }, () => { const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: redTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0 }));
+  const sparks = Array.from({ length: 40 }, () => { const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: redTex, transparent: true, depthWrite: false, opacity: 0 }));
     s.scale.setScalar(.3 + rand() * .25); scene.add(s); return { s, r: 2.5 + rand() * 4, h: 2 + rand() * 5, a: rand() * 6.28, w: .2 + rand() * .5 }; });
   const doves = Array.from({ length: 30 }, () => ({ s: glow('#fff6e6', .3 + rand() * .2), a: rand() * 6.28, r: .5 + rand() * 4, k: rand(), v: .25 + rand() * .3 }));
   // paso 7: hilos de esperanza entre las lámparas
   const thr = [];
   for (let i = 0; i < N; i++) { const p = segs[i].lamp.position, q = segs[(i + 3) % N].lamp.position; thr.push(p.x, .45, p.z, q.x, .45, q.z, p.x, .45, p.z, JX, 1, JZ); }
   const thrGeo = new THREE.BufferGeometry(); thrGeo.setAttribute('position', new THREE.Float32BufferAttribute(thr, 3));
-  const thrMat = new THREE.LineBasicMaterial({ color: '#ffd68a', transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false });
+  const thrMat = new THREE.LineBasicMaterial({ color: '#c8922e', transparent: true, opacity: 0, depthWrite: false });
   scene.add(new THREE.LineSegments(thrGeo, thrMat));
 
   /* Cámara guiada por el scroll */
@@ -212,7 +212,7 @@ function initScene() {
     tBody.material.emissiveIntensity = S[2] * .2 + S[6] * .7;
     templeGlow.material.opacity = S[2] * .25 + S[6] * (.8 + Math.sin(t * 1.4) * .08);
     cityLight.intensity = 2 + S.reduce((a, b) => a + b, 0) * 1.4 + S[6] * 9;
-    scene.background.lerpColors(BG_N, BG_W, S[6] * .9); scene.fog.color.copy(scene.background); hemi.intensity = 1.4 + S[6] * .5;
+    scene.background.lerpColors(BG_N, BG_W, S[6] * .9); scene.fog.color.copy(scene.background); hemi.intensity = 1.6 + S[6] * .4;
     renderer.render(scene, camera);
   }
   loop();
