@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="es" data-variant="pastoral" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Una magnífica humanidad · Para empezar</title>
+<meta name="description" content="Magnifica humanitas, la encíclica de León XIV sobre la persona humana en el tiempo de la inteligencia artificial, explicada en siete pasos sencillos.">
+<meta name="theme-color" content="#0B0A08">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Una magnífica humanidad · Para empezar">
+<meta property="og:description" content="La encíclica de León XIV en siete pasos sencillos: ¿construir Babel o reconstruir Jerusalén?">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="modulepreload" href="js/three.module.min.js">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#prologo">Saltar al contenido</a>
+
+<div class="stage" aria-hidden="true">
+  <canvas id="escena3d"></canvas>
+  <div class="stage__fallback">
+    <svg viewBox="0 0 400 240" class="templo-svg">
+      <g fill="none" stroke-width="1.2">
+        <path d="M60 210 V180 H76 V160 H92 V140 H108 V120 H124 V140 H140 V160 H156 V180 H172 V210" stroke="#5aa7b3"/>
+        <path d="M230 210 V176 H246 V168 H262 V176 H300 V168 H316 V176 H354 V168 H370 V176 V210" stroke="#C9A35B"/>
+        <path d="M20 210 H380" stroke="#C9A35B"/>
+      </g>
+      <g fill="#C9A35B"><circle cx="254" cy="160" r="3"/><circle cx="308" cy="160" r="3"/><circle cx="362" cy="160" r="3"/></g>
+    </svg>
+  </div>
+  <div class="stage__veil"></div>
+</div>
+
+<header class="top">
+  <a class="top__brand" href="#inicio">Una magnífica humanidad</a>
+  <button class="top__btn" type="button" aria-expanded="false" aria-controls="menu"><span class="top__cur" id="actual">Índice</span><i aria-hidden="true"></i></button>
+  <nav class="top__nav" id="menu" aria-label="Índice" hidden>
+    <p class="top__grp">Siete pasos</p>
+    <ol>
+        <li><a href="#paso-1" data-dot="1"><span class="rn">1</span><span class="nm">Babel o Jerusalén</span></a></li>
+        <li><a href="#paso-2" data-dot="2"><span class="rn">2</span><span class="nm">Un camino largo</span></a></li>
+        <li><a href="#paso-3" data-dot="3"><span class="rn">3</span><span class="nm">Los cimientos</span></a></li>
+        <li><a href="#paso-4" data-dot="4"><span class="rn">4</span><span class="nm">La inteligencia artificial</span></a></li>
+        <li><a href="#paso-5" data-dot="5"><span class="rn">5</span><span class="nm">Verdad, trabajo, libertad</span></a></li>
+        <li><a href="#paso-6" data-dot="6"><span class="rn">6</span><span class="nm">La paz</span></a></li>
+        <li><a href="#paso-7" data-dot="7"><span class="rn">7</span><span class="nm">Con María</span></a></li>
+    </ol>
+    <p class="top__grp">Más</p>
+    <ol>
+        <li><a href="#palabras"><span class="rn">·</span><span class="nm">Palabras para entender</span></a></li>
+        <li><a href="#final"><span class="rn">·</span><span class="nm">Para profundizar</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio" data-cam="over">
+    <p class="eyebrow reveal">Magnifica humanitas · León XIV · Para empezar</p>
+    <h1 class="hero__title hero__title--2"><span class="line"><span>Una magnífica</span></span><span class="line"><span><em>humanidad</em></span></span></h1>
+    <p class="hero__sub reveal">La encíclica sobre la persona humana en el tiempo de la inteligencia artificial, en siete pasos sencillos</p>
+    <a class="hero__cue" href="#prologo"><span>Empieza aquí</span><i></i></a>
+  </section>
+
+  <section class="prologo" id="prologo" data-cam="over">
+    <div class="prologo__inner">
+      <p class="cap reveal"><span class="drop">E</span>l 15 de mayo de 2026, León XIV firmó la encíclica <em>Magnifica humanitas</em>. Responde a una pregunta muy actual: <b>¿cómo seguir siendo humanos en el tiempo de la inteligencia artificial?</b></p>
+      <p class="reveal">Es un texto largo, de 245 números. Aquí lo tienes en siete pasos, uno por cada parte: qué dice en pocas palabras, una frase de la propia encíclica, un texto de la Biblia, una pregunta para rezar y un gesto para la vida.</p>
+      <p class="reveal">Mientras bajas, en la escena se levanta poco a poco una ciudad: frente a la torre de Babel, la muralla de Jerusalén crece un tramo con cada paso.</p>
+      <p class="reveal muted">¿Quieres ir más a fondo? Cada paso tiene un botón que te lleva a la guía completa, <a href="../babel-jerusalen/">Babel o Jerusalén</a>.</p>
+    </div>
+  </section>
+
+  <!-- Paso 1 -->
+  <section class="etapa" id="paso-1" data-cam="p1" data-n="1">
+    <div class="etapa__head">
+      <span class="etapa__rn">1</span>
+      <p class="etapa__lugar">Babel o Jerusalén</p>
+      <p class="etapa__hint">Introducción · nn. 1-16</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 1 · Introducción, nn. 1-16</p>
+      <h2 class="panel__title">Una elección decisiva</h2>
+      <div class="breve">
+        <p class="breve__label">En pocas palabras</p>
+        <p class="breve__txt">La técnica no es buena ni mala en sí misma, pero tampoco es neutral: depende de quién la hace y para qué la usa. La pregunta es qué ciudad queremos construir.</p>
+      </div>
+      <p>El Papa empieza con dos historias de la Biblia. En <b>Babel</b>, los hombres levantan una torre para llegar al cielo y hacerse un nombre: todos hablan igual, nadie escucha a nadie, y la obra se viene abajo. En <b>Jerusalén</b>, Nehemías se entera de que la ciudad está en ruinas, reza, pide ayuda y reconstruye la muralla junto con el pueblo, cada familia su tramo.</p>
+      <p>Hoy la inteligencia artificial puede curar, conectar, educar y cuidar la casa común. También puede dividir, descartar y crear nuevas injusticias. Por eso, dice el Papa…</p>
+      <figure class="enc">
+        <p class="enc__label">Dice la encíclica</p>
+        <blockquote><p>«…la primera elección no es entre un “sí” o un “no” a la tecnología, sino entre construir Babel o reconstruir Jerusalén»</p></blockquote>
+        <figcaption>Magnifica humanitas, n. 9</figcaption>
+      </figure>
+      <blockquote class="cita">
+        <p>«¡Levantémonos y construyamos!»</p>
+        <cite>Nehemías 2, 18</cite>
+      </blockquote>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Qué estoy construyendo yo: una torre para mí o una casa para todos?</p>
+      </div>
+      <div class="gesto">
+        <p class="gesto__label">Para la vida</p>
+        <p>Antes de usar una aplicación o una IA, pregúntate: ¿esto me ayuda a construir con otros o solo a levantar mi propia torre?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="../babel-jerusalen/#eleccion">Profundizar en la introducción</a>
+        <button class="btn btn--ghost" data-share="1" type="button">Compartir por WhatsApp</button>
+      </div>
+      <p class="leer"><a href="https://www.biblegateway.com/passage/?search=Nehemías+2%3A11-18&amp;version=BLP" target="_blank" rel="noopener">Leer Nehemías 2, 11-18 en la Biblia</a></p>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Si el Señor no construye la casa, en vano se cansan los albañiles».<cite>Salmo 127, 1</cite></p></div>
+
+  <!-- Paso 2 -->
+  <section class="etapa" id="paso-2" data-cam="p2" data-n="2">
+    <div class="etapa__head">
+      <span class="etapa__rn">2</span>
+      <p class="etapa__lugar">Un camino largo</p>
+      <p class="etapa__hint">Capítulo I · nn. 17-45</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 2 · Capítulo I, nn. 17-45</p>
+      <h2 class="panel__title">La Iglesia ya ha pasado por esto</h2>
+      <div class="breve">
+        <p class="breve__label">En pocas palabras</p>
+        <p class="breve__txt">No es la primera vez que el mundo cambia de golpe. Con la revolución industrial la Iglesia aprendió a defender a los obreros; hoy usa esa experiencia ante la revolución digital.</p>
+      </div>
+      <p>En 1891, el papa León XIII escribió la <em>Rerum novarum</em> para defender a los trabajadores: salario justo, derecho a asociarse, dignidad del trabajo. Desde entonces, los papas han ido construyendo la <b>doctrina social de la Iglesia</b>: lo que el Evangelio ilumina sobre el trabajo, la economía, la política y la paz.</p>
+      <p>No es un programa de partido ni un manual técnico. La Iglesia escucha a la ciencia y a todos los que buscan la verdad, y no la impone: la comparte. Por eso la encíclica describe la doctrina social como…</p>
+      <figure class="enc">
+        <p class="enc__label">Dice la encíclica</p>
+        <blockquote><p>«…un camino de discernimiento comunitario»</p></blockquote>
+        <figcaption>Magnifica humanitas, n. 27</figcaption>
+      </figure>
+      <blockquote class="cita">
+        <p>«Todo escriba que se ha hecho discípulo del reino de los cielos es como un padre de familia que va sacando de su tesoro lo nuevo y lo antiguo».</p>
+        <cite>Mateo 13, 52</cite>
+      </blockquote>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Dejo que la fe ilumine mis decisiones sobre el trabajo, el dinero o la tecnología?</p>
+      </div>
+      <div class="gesto">
+        <p class="gesto__label">Para la vida</p>
+        <p>Lee una noticia de esta semana sobre trabajo o tecnología y coméntala con alguien a la luz del Evangelio.</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="../babel-jerusalen/#capitulo-1">Profundizar en el capítulo I</a>
+        <button class="btn btn--ghost" data-share="2" type="button">Compartir por WhatsApp</button>
+      </div>
+      <p class="leer"><a href="https://www.biblegateway.com/passage/?search=Mateo+13%3A44-52&amp;version=BLP" target="_blank" rel="noopener">Leer Mateo 13, 44-52 en la Biblia</a></p>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Jesucristo es el mismo ayer y hoy y siempre».<cite>Hebreos 13, 8</cite></p></div>
+
+  <!-- Paso 3 -->
+  <section class="etapa" id="paso-3" data-cam="p3" data-n="3">
+    <div class="etapa__head">
+      <span class="etapa__rn">3</span>
+      <p class="etapa__lugar">Los cimientos</p>
+      <p class="etapa__hint">Capítulo II · nn. 46-89</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 3 · Capítulo II, nn. 46-89</p>
+      <h2 class="panel__title">Toda persona vale por sí misma</h2>
+      <div class="breve">
+        <p class="breve__label">En pocas palabras</p>
+        <p class="breve__txt">Antes de hablar de máquinas hay que saber quién es el ser humano: imagen de Dios, con una dignidad que nadie da y nadie puede quitar.</p>
+      </div>
+      <p>Nuestra dignidad no depende de lo que producimos, sabemos o tenemos. Viene de haber sido queridos, creados y amados por Dios, y ningún pecado, fracaso o exclusión la borra.</p>
+      <p>Sobre esa piedra se apoyan los demás principios de la doctrina social:</p>
+      <ul class="ejes">
+        <li>El bien común</li>
+        <li>Los bienes de la tierra son para todos</li>
+        <li>La subsidiariedad</li>
+        <li>La solidaridad</li>
+        <li>La justicia social</li>
+        <li>El desarrollo de toda la persona</li>
+      </ul>
+      <figure class="enc">
+        <p class="enc__label">Dice la encíclica</p>
+        <blockquote><p>«Es la dignidad que pertenece a todo ser humano simplemente por el hecho de existir»</p></blockquote>
+        <figcaption>Magnifica humanitas, n. 52</figcaption>
+      </figure>
+      <blockquote class="cita">
+        <p>«Y creó Dios al hombre a su imagen; a imagen de Dios lo creó; hombre y mujer los creó».</p>
+        <cite>Génesis 1, 27</cite>
+      </blockquote>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Trato a algunas personas como si valieran menos que otras?</p>
+      </div>
+      <div class="gesto">
+        <p class="gesto__label">Para la vida</p>
+        <p>Saluda por su nombre a alguien que suele pasar desapercibido: quien limpia, quien atiende la caja, quien pide a la puerta de la iglesia.</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="../babel-jerusalen/#capitulo-2">Profundizar en el capítulo II</a>
+        <button class="btn btn--ghost" data-share="3" type="button">Compartir por WhatsApp</button>
+      </div>
+      <p class="leer"><a href="https://www.biblegateway.com/passage/?search=Génesis+1%3A26-31&amp;version=BLP" target="_blank" rel="noopener">Leer Génesis 1, 26-31 en la Biblia</a></p>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Ya no sois extranjeros ni forasteros, sino conciudadanos de los santos y familiares de Dios».<cite>Efesios 2, 19</cite></p></div>
+
+  <!-- Paso 4 -->
+  <section class="etapa" id="paso-4" data-cam="p4" data-n="4">
+    <div class="etapa__head">
+      <span class="etapa__rn">4</span>
+      <p class="etapa__lugar">La inteligencia artificial</p>
+      <p class="etapa__hint">Capítulo III · nn. 90-130</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 4 · Capítulo III, nn. 90-130</p>
+      <h2 class="panel__title">Una herramienta poderosa, no una persona</h2>
+      <div class="breve">
+        <p class="breve__label">En pocas palabras</p>
+        <p class="breve__txt">La IA puede ayudar mucho, pero su poder se concentra en pocas manos y no puede sustituir lo que nos hace humanos. Hay que gobernarla entre todos.</p>
+      </div>
+      <p>Las inteligencias artificiales de hoy, dice el Papa, están más «cultivadas» que «construidas»: crecen a partir de enormes cantidades de datos, y ni siquiera quienes las diseñan saben bien cómo funcionan por dentro. Además, «más poderoso no significa necesariamente mejor» (n. 93).</p>
+      <p>Pueden imitar nuestro lenguaje, pero ningún sistema de cálculo genera un corazón que se entrega ni una conciencia que distingue el bien. Tampoco hay que soñar con superar todo límite: la fragilidad no es un error que corregir, forma parte de lo humano.</p>
+      <p>Por eso pide reglas, transparencia y participación de todos, porque…</p>
+      <figure class="enc">
+        <p class="enc__label">Dice la encíclica</p>
+        <blockquote><p>«No serviría de nada una IA más moral, si esta moral es decidida por unos pocos»</p></blockquote>
+        <figcaption>Magnifica humanitas, n. 107</figcaption>
+      </figure>
+      <blockquote class="cita">
+        <p>«¿Qué es el hombre para que te acuerdes de él, el ser humano, para mirar por él?».</p>
+        <cite>Salmo 8, 5</cite>
+      </blockquote>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Qué parte de mi vida estoy dejando en manos de una pantalla o de una máquina?</p>
+      </div>
+      <div class="gesto">
+        <p class="gesto__label">Para la vida</p>
+        <p>No le pidas a una máquina lo que te hace humano: pedir perdón, consolar, rezar, decidir en conciencia.</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="../babel-jerusalen/#capitulo-3">Profundizar en el capítulo III</a>
+        <button class="btn btn--ghost" data-share="4" type="button">Compartir por WhatsApp</button>
+      </div>
+      <p class="leer"><a href="https://www.biblegateway.com/passage/?search=Salmo+8&amp;version=BLP" target="_blank" rel="noopener">Leer Salmo 8 en la Biblia</a></p>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Examinadlo todo; quedaos con lo bueno».<cite>1 Tesalonicenses 5, 21</cite></p></div>
+
+  <!-- Paso 5 -->
+  <section class="etapa" id="paso-5" data-cam="p5" data-n="5">
+    <div class="etapa__head">
+      <span class="etapa__rn">5</span>
+      <p class="etapa__lugar">Verdad, trabajo, libertad</p>
+      <p class="etapa__hint">Capítulo IV · nn. 131-181</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 5 · Capítulo IV, nn. 131-181</p>
+      <h2 class="panel__title">Tres puertas que cuidar</h2>
+      <div class="breve">
+        <p class="breve__label">En pocas palabras</p>
+        <p class="breve__txt">La técnica cambia la vida de cada día. El Papa pide cuidar tres puertas por las que entra o se escapa lo humano.</p>
+      </div>
+      <p><b>La verdad.</b> Ante bulos y manipulaciones, la verdad es un bien de todos, no de quien tiene más poder o más seguidores. Hace falta educar, y una «higiene de la atención» (n. 146).</p>
+      <p><b>El trabajo.</b> No es una mercancía. La IA no debe usarse para descartar personas, y la riqueza no puede quedarse en manos de unos pocos.</p>
+      <p><b>La libertad.</b> Muchas aplicaciones viven de enganchar nuestra atención, y los niños necesitan una protección especial. Y detrás de nuestros aparatos hay trabajos ocultos, a veces de niños y adolescentes en las minas.</p>
+      <figure class="enc">
+        <p class="enc__label">Dice la encíclica</p>
+        <blockquote><p>«Cuando los modelos de negocio prosperan a costa de la debilidad humana, la persona es tratada como un medio y no como un fin»</p></blockquote>
+        <figcaption>Magnifica humanitas, n. 170</figcaption>
+      </figure>
+      <blockquote class="cita">
+        <p>«Conoceréis la verdad, y la verdad os hará libres».</p>
+        <cite>Juan 8, 32</cite>
+      </blockquote>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Qué me roba tiempo y libertad? ¿Comparto cosas sin comprobarlas?</p>
+      </div>
+      <div class="gesto">
+        <p class="gesto__label">Para la vida</p>
+        <p>Antes de reenviar un mensaje, comprueba si es verdad. Y prueba un día de pequeño ayuno digital.</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="../babel-jerusalen/#capitulo-4">Profundizar en el capítulo IV</a>
+        <button class="btn btn--ghost" data-share="5" type="button">Compartir por WhatsApp</button>
+      </div>
+      <p class="leer"><a href="https://www.biblegateway.com/passage/?search=Juan+8%3A31-36&amp;version=BLP" target="_blank" rel="noopener">Leer Juan 8, 31-36 en la Biblia</a></p>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Para la libertad nos ha liberado Cristo».<cite>Gálatas 5, 1</cite></p></div>
+
+  <!-- Paso 6 -->
+  <section class="etapa" id="paso-6" data-cam="p6" data-n="6">
+    <div class="etapa__head">
+      <span class="etapa__rn">6</span>
+      <p class="etapa__lugar">La paz</p>
+      <p class="etapa__hint">Capítulo V · nn. 182-228</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 6 · Capítulo V, nn. 182-228</p>
+      <h2 class="panel__title">Desarmar la tierra y las palabras</h2>
+      <div class="breve">
+        <p class="breve__label">En pocas palabras</p>
+        <p class="breve__txt">Frente a una cultura del poder que ve la guerra como algo normal, el Papa propone la civilización del amor.</p>
+      </div>
+      <p>La IA ya se usa en armas que pueden elegir objetivos casi solas. El Papa es claro: «No existe algoritmo que pueda hacer que la guerra sea moralmente aceptable» (n. 198).</p>
+      <p>La paz no es ingenuidad: es fruto de la justicia y de la caridad, y siempre es posible. Pide dialogar y negociar, mirar con los ojos de las víctimas y no rendirse a la idea de que no se puede hacer nada. Y empieza por algo cercano:</p>
+      <figure class="enc">
+        <p class="enc__label">Dice la encíclica</p>
+        <blockquote><p>«Desarmemos las palabras y contribuiremos a desarmar la tierra»</p></blockquote>
+        <figcaption>Magnifica humanitas, n. 214</figcaption>
+      </figure>
+      <blockquote class="cita">
+        <p>«No te dejes vencer por el mal, antes bien, vence el mal con el bien».</p>
+        <cite>Romanos 12, 21</cite>
+      </blockquote>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Dónde necesito desarmar mis palabras?</p>
+      </div>
+      <div class="gesto">
+        <p class="gesto__label">Para la vida</p>
+        <p>Hoy, en casa o en las redes, cambia una palabra dura por una que construya.</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="../babel-jerusalen/#capitulo-5">Profundizar en el capítulo V</a>
+        <button class="btn btn--ghost" data-share="6" type="button">Compartir por WhatsApp</button>
+      </div>
+      <p class="leer"><a href="https://www.biblegateway.com/passage/?search=Romanos+12%3A9-21&amp;version=BLP" target="_blank" rel="noopener">Leer Romanos 12, 9-21 en la Biblia</a></p>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Bienaventurados los que trabajan por la paz».<cite>Mateo 5, 9</cite></p></div>
+
+  <!-- Paso 7 -->
+  <section class="etapa" id="paso-7" data-cam="p7" data-n="7">
+    <div class="etapa__head">
+      <span class="etapa__rn">7</span>
+      <p class="etapa__lugar">Con María</p>
+      <p class="etapa__hint">Conclusión · nn. 229-245</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 7 · Conclusión, nn. 229-245</p>
+      <h2 class="panel__title">Una magnífica humanidad</h2>
+      <div class="breve">
+        <p class="breve__label">En pocas palabras</p>
+        <p class="breve__txt">La encíclica termina con un camino sencillo: contemplar a Cristo, vivir unidos en la Eucaristía, construir el bien y rezar con María.</p>
+      </div>
+      <p>En Jesús, Dios se hizo carne pobre y frágil. Por eso la debilidad no es algo que borrar: Dios la asume y la convierte en lugar de salvación.</p>
+      <p>Como Nehemías, no somos espectadores ni comentaristas de las ruinas. Estamos llamados a entrar en la obra —escuelas, empresas, medios, parroquias, barrios— y, con María, a mirar el mundo desde abajo, con los ojos de quien sufre. La última invitación del Papa es esta:</p>
+      <figure class="enc">
+        <p class="enc__label">Dice la encíclica</p>
+        <blockquote><p>«…convirtámonos en tejedores de esperanza en nuestro mundo, compartiendo lo que somos y lo que tenemos»</p></blockquote>
+        <figcaption>Magnifica humanitas, n. 245</figcaption>
+      </figure>
+      <blockquote class="cita">
+        <p>«Proclama mi alma la grandeza del Señor, se alegra mi espíritu en Dios, mi salvador».</p>
+        <cite>Lucas 1, 46-47</cite>
+      </blockquote>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Qué hilo de esperanza puedo tejer hoy?</p>
+      </div>
+      <div class="gesto">
+        <p class="gesto__label">Para la vida</p>
+        <p>Reza el Magníficat esta noche, despacio, poniendo delante a una persona que sufre.</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="../babel-jerusalen/#conclusion">Profundizar en la conclusión</a>
+        <button class="btn btn--ghost" data-share="7" type="button">Compartir por WhatsApp</button>
+      </div>
+      <p class="leer"><a href="https://www.biblegateway.com/passage/?search=Lucas+1%3A46-55&amp;version=BLP" target="_blank" rel="noopener">Leer Lucas 1, 46-55 en la Biblia</a></p>
+    </article>
+  </section>
+
+  <section class="palabras" id="palabras" data-cam="p7">
+    <div class="palabras__inner">
+      <p class="eyebrow reveal">Para no perderse</p>
+      <h2 class="parte__title reveal">Palabras para entender</h2>
+      <dl class="glosario">
+        <div><dt>Encíclica</dt><dd>Una carta del Papa a toda la Iglesia y a las personas de buena voluntad sobre un tema importante.</dd></div>
+        <div><dt><em>Magnifica humanitas</em></dt><dd>«Magnífica humanidad». Como es costumbre, la encíclica toma su nombre de sus primeras palabras en latín.</dd></div>
+        <div><dt>Doctrina social de la Iglesia</dt><dd>Lo que la Iglesia enseña, desde el Evangelio, sobre la vida en sociedad: trabajo, economía, política, paz.</dd></div>
+        <div><dt>Inteligencia artificial (IA)</dt><dd>Programas que aprenden de grandes cantidades de datos y pueden escribir, hablar, reconocer imágenes o tomar decisiones.</dd></div>
+        <div><dt>Paradigma tecnocrático</dt><dd>La mentalidad que cree que todo se resuelve con más técnica y que lo más eficaz es siempre lo mejor.</dd></div>
+        <div><dt>Transhumanismo</dt><dd>Corrientes que quieren «superar» los límites humanos con la técnica, hasta una humanidad casi sin cuerpo.</dd></div>
+        <div><dt>Bien común</dt><dd>Las condiciones que permiten a todos, personas y grupos, crecer y vivir con dignidad.</dd></div>
+        <div><dt>Subsidiariedad</dt><dd>Que lo que pueden hacer las personas, las familias y los grupos pequeños no se lo quite una instancia más grande.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="final" id="final" data-cam="final">
+    <div class="final__inner">
+      <p class="eyebrow reveal">Para profundizar</p>
+      <h2 class="final__title reveal">Sigue el camino</h2>
+      <p class="reveal">Has recorrido la encíclica en siete pasos. Si quieres leerla con calma, la guía <em>Babel o Jerusalén</em> la recorre número a número: más de sesenta pasos, con escenas, textos de la Biblia y preguntas para la oración.</p>
+      <div class="acciones acciones--center">
+        <a class="btn" href="../babel-jerusalen/">Entrar en «Babel o Jerusalén»</a>
+        <button class="btn btn--ghost" data-share="0" type="button">Compartir por WhatsApp</button>
+      </div>
+      <div class="final__indices">
+        <p class="final__grp">Ir directamente a cada parte</p>
+        <ol class="final__index">
+          <li><a href="../babel-jerusalen/#eleccion"><span class="rn">1</span> <span class="nm">Introducción · Babel o Jerusalén</span><em>nn. 1-16</em></a></li>
+          <li><a href="../babel-jerusalen/#capitulo-1"><span class="rn">2</span> <span class="nm">Capítulo I · Un camino largo</span><em>nn. 17-45</em></a></li>
+          <li><a href="../babel-jerusalen/#capitulo-2"><span class="rn">3</span> <span class="nm">Capítulo II · Los cimientos</span><em>nn. 46-89</em></a></li>
+          <li><a href="../babel-jerusalen/#capitulo-3"><span class="rn">4</span> <span class="nm">Capítulo III · La inteligencia artificial</span><em>nn. 90-130</em></a></li>
+          <li><a href="../babel-jerusalen/#capitulo-4"><span class="rn">5</span> <span class="nm">Capítulo IV · Verdad, trabajo, libertad</span><em>nn. 131-181</em></a></li>
+          <li><a href="../babel-jerusalen/#capitulo-5"><span class="rn">6</span> <span class="nm">Capítulo V · La paz</span><em>nn. 182-228</em></a></li>
+          <li><a href="../babel-jerusalen/#conclusion"><span class="rn">7</span> <span class="nm">Conclusión · Con María</span><em>nn. 229-245</em></a></li>
+        </ol>
+      </div>
+      <div class="acciones acciones--center">
+        <a class="btn btn--ghost" href="https://www.vatican.va/content/leo-xiv/es/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">Leer la encíclica completa</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <p>Una introducción sencilla a <em>Magnifica humanitas</em> (León XIV, 15 de mayo de 2026). Los textos de la encíclica se citan en fragmentos breves; el resto es una presentación propia. Textos bíblicos: Sagrada Biblia, versión oficial de la Conferencia Episcopal Española.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
